@@ -1,0 +1,131 @@
+/* ===========================================
+// src/components/BrowseByStyle.css
+// Styling for "Browse By Dress Style" section
+// =========================================== */
+.browse-by-style-section {
+    background-color: #f8f8f8; /* Light background */
+    padding: 40px 0; /* Vertical padding, horizontal handled by wrapper */
+    border-radius: 8px; /* Consistent rounded corners */
+    margin-bottom: 32px; /* Spacing below section */
+}
+
+.browse-by-style-content-wrapper {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+    padding: 0 16px; /* Consistent horizontal padding */
+}
+
+.section-title {
+    font-family: 'Arial Black', sans-serif; /* Consistent with Hero heading if desired */
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 900;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.5rem; /* mb-10 */
+}
+
+.style-categories-grid {
+    display: flex; /* Use flexbox to stack rows */
+    flex-direction: column;
+    gap: 20px; /* Gap between the top and bottom rows */
+}
+
+.top-row-grid,
+.bottom-row-grid {
+    display: grid;
+    gap: 20px; /* Gap between cards within each row */
+}
+
+/* Default for mobile: Stack vertically */
+.top-row-grid {
+    grid-template-columns: 1fr;
+}
+.bottom-row-grid {
+    grid-template-columns: 1fr;
+}
+
+.style-category-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Crucial for rounded corners on image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* For positioning title */
+    display: flex;
+    flex-direction: column; /* Stack image and title implicitly */
+    justify-content: flex-end; /* Push content to bottom by default */
+    min-height: 200px; /* Ensure cards have a minimum height */
+}
+
+.style-category-image {
+    width: 100%;
+    height: 100%; /* Fill the card height */
+    object-fit: cover; /* Cover the area, crop if necessary */
+    position: absolute; /* Allow text to overlay */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place image behind text */
+    border-radius: 8px; /* Apply to image too */
+}
+
+.style-category-title {
+    position: absolute; /* Overlay text */
+    top: 16px; /* Distance from top */
+    left: 16px; /* Distance from left */
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #333; /* Dark text */
+    z-index: 2; /* Place text above image */
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background for readability */
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Specific styling for the Party card (wider) */
+/* No specific height needed here if object-fit: cover and parent height is managed by grid */
+
+
+/* Responsive adjustments */
+@media (min-width: 640px) { /* Small screens (sm) */
+    .top-row-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for top row */
+    }
+    .bottom-row-grid {
+        /* For mobile/small screens, Party and Gym might still stack or have a simpler 1fr layout */
+        grid-template-columns: 1fr; /* Still stack or simplify */
+    }
+    .style-category-title {
+        font-size: 1.75rem; /* text-3xl */
+    }
+}
+
+@media (min-width: 768px) { /* Medium screens (md) */
+    .browse-by-style-content-wrapper {
+        padding: 0 40px; /* Larger padding */
+    }
+    .top-row-grid {
+        grid-template-columns: repeat(2, 1fr); /* Remain 2 columns */
+    }
+    .bottom-row-grid {
+        /* This is the key for the Party/Gym layout */
+        grid-template-columns: 2fr 1fr; /* Party takes 2 parts, Gym takes 1 part */
+    }
+    .style-category-card {
+        min-height: 250px; /* Increase height for larger screens */
+    }
+    .style-category-title {
+        font-size: 2rem; /* text-4xl */
+    }
+}
+
+@media (min-width: 1024px) { /* Large screens (lg) */
+    .browse-by-style-content-wrapper {
+        padding: 0 80px; /* Even larger padding */
+    }
+    .style-category-card {
+        min-height: 300px; /* Further increase height for large screens */
+    }
+    .style-category-title {
+        font-size: 2.25rem; /* text-5xl */
+    }
+}

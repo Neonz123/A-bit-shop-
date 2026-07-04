@@ -1,0 +1,56 @@
+/* Home.css */
+
+/* Global body styles (adjust if already defined elsewhere) */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Assuming Inter font */
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+.home-page-wrapper {
+    min-height: 100vh;
+    padding: 10px; /* Add some overall padding around the main page content */
+}
+
+/* Adjust padding for sections within the home page */
+.hero-section,
+.brands-section,
+.product-grid-section {
+    margin-bottom: 32px; /* Consistent spacing between sections */
+    border-radius: 8px; /* Consistent rounded corners for sections */
+    padding: 24px; /* Default padding for sections */
+}
+
+/* Specific overrides for padding as per screenshot */
+.hero-section {
+    padding: 40px 16px; /* py-12 px-4 */
+}
+
+.brands-section {
+    padding: 32px 16px; /* py-8 px-4 */
+}
+
+.product-grid-section {
+    padding: 24px; /* p-6 */
+    background-color: white; /* Product sections have white background */
+}
+
+/* Responsive adjustments for section padding */
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 40px 40px; /* md:py-10 md:px-10 */
+    }
+    .brands-section {
+        padding: 32px 40px; /* md:py-8 md:px-10 */
+    }
+    .product-grid-section {
+        padding: 40px; /* md:p-10 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        padding: 80px 40px; /* lg:py-20 lg:px-10 */
+    }
+}

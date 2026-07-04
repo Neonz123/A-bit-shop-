@@ -1,0 +1,113 @@
+.shop-section {
+  margin-bottom: 3rem;
+  border-radius: 18px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  background: #fff;
+}
+
+.shop-section-men {
+  border-left: 8px solid #007bff;
+  background: linear-gradient(90deg, #f0f6ff 80%, #e3e9f0 100%);
+}
+.shop-section-title-men {
+  color: #007bff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.shop-section-women {
+  border-left: 8px solid #e83e8c;
+  background: linear-gradient(90deg, #fff0f6 80%, #f8e3f0 100%);
+}
+.shop-section-title-women {
+  color: #e83e8c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.shop-section-kids {
+  border-left: 8px solid #ffc107;
+  background: linear-gradient(90deg, #fffbe6 80%, #fff9e3 100%);
+}
+.shop-section-title-kids {
+  color: #ffc107;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-icon {
+  font-size: 2rem;
+  margin-right: 0.7rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s;
+}
+
+.product-card-link:hover .product-card {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 1.5px 6px rgba(0,0,0,0.04);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 370px;
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0.75rem 0;
+  text-align: center;
+  min-height: 38px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-top: 0.5rem;
+}

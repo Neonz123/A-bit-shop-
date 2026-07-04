@@ -1,0 +1,185 @@
+/* General Styles */
+.footer-wrapper {
+  background-color: #f9f9f9;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.newsletter-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hidden-br {
+  display: none;
+}
+
+.newsletter-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.icon-wrapper {
+  padding: 0 10px;
+  color: #888;
+}
+
+.email-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.subscribe-button {
+  background-color: wheat   ;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: white;
+}
+
+/* Footer Links Section */
+.footer-links-container {
+  margin-top: 60px;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-columns {
+    margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-column {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.column-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-item {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link-item:hover {
+  color: #000;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-icon-wrapper:hover {
+  background-color: #ccc;
+}
+
+.social-icon {
+  font-size: 18px;
+}
+
+/* Copyright & Payments */
+.copyright-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-icon {
+  height: 25px;
+  object-fit: contain;
+}

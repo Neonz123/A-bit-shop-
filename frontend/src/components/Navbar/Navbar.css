@@ -1,0 +1,165 @@
+/* Navbar.css */
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.top-bar p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  padding: 0 5px;
+}
+
+/* Main Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0px 50px;
+}
+
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
+  margin-right: 5px;
+  margin-left: -20px;
+  
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+.dropdown-icon {
+  font-size: 12px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: right;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 8px 15px;
+  min-width:600px;
+}
+
+.search-icon {
+  color: #888;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+}
+
+/* Icons */
+.icon-link {
+  color: #000;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.icon-link:hover {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .navbar-left, .navbar-right {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .search-bar {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-left {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

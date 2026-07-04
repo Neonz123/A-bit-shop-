@@ -1,0 +1,28 @@
+/* components/BrandLogos.css */
+
+.brands-section {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px; /* Default gap for smaller screens */
+    /* Margin and padding handled by Home.css */
+}
+
+.brand-logo-item {
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap; /* Prevent breaking on small screens */
+}
+
+/* Responsive adjustments for Brands Section */
+@media (min-width: 768px) {
+    .brands-section {
+        gap: 40px; /* Larger gap for medium screens */
+    }
+    .brand-logo-item {
+        font-size: 24px; /* Larger text for medium screens */
+    }
+}

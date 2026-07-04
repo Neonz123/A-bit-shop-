@@ -1,0 +1,194 @@
+/* components/Hero.css */
+
+.hero-section {
+    background-color: #f8f8f8; /* Light background for Hero */
+    color: #333333; /* Default text color changed to dark grey */
+    padding-top: 40px; /* py-12 */
+    padding-bottom: 40px;
+    border-radius: 8px; /* rounded-lg */
+    /* margin-bottom handled by Home.css */
+    display: flex; /* flex-col lg:flex-row */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
+}
+
+/* Wrapper for inner content to control max-width and padding */
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Default for mobile */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Take full width of parent section */
+    max-width: 1200px; /* Consistent max-width with Home.css */
+    margin: 0 auto;
+    /* Padding handled by Home.css for hero-content-wrapper directly */
+}
+
+
+.hero-content-left {
+    text-align: center;
+    z-index: 10;
+    margin-bottom: 32px; /* mb-8 */
+    width: 100%;
+}
+
+.hero-heading {
+    font-family: 'Arial Black', sans-serif; /* Use a very bold font similar to the screenshot */
+    font-size: 36px; /* text-4xl */
+    font-weight: 900; /* Even bolder */
+    line-height: 1.1; /* Tighter line height */
+    letter-spacing: -0.05em; /* Tighter letter spacing */
+    margin-bottom: 16px; /* mb-4 */
+    color: #1a1a1a; /* Explicitly dark for heading */
+    text-transform: uppercase; /* Ensure uppercase */
+}
+
+.hero-description {
+    font-size: 16px; /* text-base */
+    margin-bottom: 32px; /* mb-8 */
+    max-width: 500px; /* max-w-lg */
+    margin-left: auto;
+    margin-right: auto;
+    color: #666666; /* Slightly lighter dark grey for description */
+}
+
+.shop-now-button {
+    padding: 16px 32px; /* px-8 py-4 */
+    background-color: black; /* Button remains black */
+    color: white;
+    font-weight: 600; /* font-semibold */
+    border-radius: 9999px; /* rounded-full */
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* text-lg */
+    border: none;
+    cursor: pointer;
+}
+
+.shop-now-button:hover {
+    background-color: #333333;
+}
+
+.hero-stats {
+    margin-top: 48px; /* mt-12 */
+    display: grid;
+    grid-template-columns: 1fr; /* grid-cols-1 */
+    gap: 100px; /* gap-4 */
+    text-align: center;
+    color: #1a1a1a; /* Stats numbers are dark */
+    margin-right:50% ;
+}
+
+.hero-stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 28px; /* text-3xl */
+    font-weight: 700; /* font-bold */
+}
+
+.stat-label {
+    font-size: 14px; /* text-sm */
+    color: #666666; /* Stat labels are dark grey */
+}
+
+.hero-image-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: white; /* Added white background for the image area */
+    border-radius: 8px; /* Match container border-radius */
+    overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.models-image {
+    width: 100%;
+    max-width: 400px; /* max-w-md */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    min-height: 300px;
+    max-height: 450px;
+}
+
+.decorative-star {
+    position: absolute;
+    background-color: black; /* Changed to black for the stars */
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    opacity: 1; /* Made fully opaque like in the screenshot */
+}
+
+.decorative-star.top-right {
+    top: 40px;
+    right: 40px;
+    width: 32px;
+    height: 32px;
+}
+
+.decorative-star.bottom-left {
+    bottom: 80px;
+    left: 40px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive adjustments for Hero Section */
+@media (min-width: 768px) {
+    .hero-heading {
+        font-size: 48px;
+    }
+    .hero-description {
+        font-size: 18px;
+    }
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for stats on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        /* No padding here, as hero-content-wrapper handles it */
+        flex-direction: row; /* lg:flex-row */
+        padding-top: 80px; /* lg:py-20 */
+        padding-bottom: 80px;
+    }
+    .hero-content-wrapper {
+        flex-direction: row; /* lg:flex-row */
+        /* Padding handled by Home.css for hero-content-wrapper directly */
+    }
+    .hero-content-left {
+        width: 50%; /* lg:w-1/2 */
+        text-align: left; /* lg:text-left */
+        margin-right: 20px;
+        margin-bottom: 0; /* lg:mb-0 */
+    }
+    .hero-heading {
+        font-size: 60px; /* lg:text-6xl */
+    }
+    .hero-description {
+        margin-left: 0; /* lg:mx-0 */
+        margin-right: 0; /* lg:mx-0 */
+    }
+    .hero-image-right {
+        width: 50%; /* lg:w-1/2 */
+    }
+    .models-image {
+        max-width: none; /* lg:max-w-none */
+        min-height: 400px;
+        max-height: 600px;
+        width: auto;
+    }
+}
